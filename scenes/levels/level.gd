@@ -16,6 +16,7 @@ func _on_player_laser_signal(pos, direction) -> void:
 	laser.rotation_degrees = rad_to_deg (direction.angle()) + 90
 	laser.direction = direction 
 	$Projectiles.add_child(laser)
+	print("test1")
 
 func _on_player_grenade_signal(pos, direction) -> void:
 	var grenade: RigidBody2D = grenade_scene.instantiate()
