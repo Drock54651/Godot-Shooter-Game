@@ -12,6 +12,7 @@ func _on_player_laser_signal(pos, direction) -> void:
 	var laser: Area2D = laser_scene.instantiate()
 	# Update laser position to laser markers
 	laser.position = pos
+	print('hello')
 	laser.rotation_degrees = rad_to_deg (direction.angle()) + 90
 	laser.direction = direction 
 	$Projectiles.add_child(laser)
