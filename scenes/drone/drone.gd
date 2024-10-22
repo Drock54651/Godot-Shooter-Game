@@ -5,3 +5,6 @@ func _process(_delta: float) -> void:
 	var direction = Vector2(1,0)
 	velocity = direction * speed
 	move_and_slide()
+
+func hit():
+	print('OUCH')
