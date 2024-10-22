@@ -10,14 +10,11 @@ func _on_gate_player_entered_gate(_body) -> void:
 
 func _on_player_laser_signal(pos, direction) -> void:
 	var laser: Area2D = laser_scene.instantiate()
-	print(';asdas')
 	# Update laser position to laser markers
 	laser.position = pos
-	print('hello')
 	laser.rotation_degrees = rad_to_deg (direction.angle()) + 90
 	laser.direction = direction 
 	$Projectiles.add_child(laser)
-	print("test1")
 
 func _on_player_grenade_signal(pos, direction) -> void:
 	var grenade: RigidBody2D = grenade_scene.instantiate()
