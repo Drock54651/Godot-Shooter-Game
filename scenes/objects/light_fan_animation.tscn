@@ -199,13 +199,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 24.0
+"speed": 60.0
 }]
 
 [node name="LightFanAnimation" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_8iqcc")
-frame_progress = 0.11202
+frame = 23
+frame_progress = 0.423182
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-energy = 4.06
+energy = 2.97
 texture = ExtResource("49_va7w6")

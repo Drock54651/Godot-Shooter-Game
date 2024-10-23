@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cud2be8l2ho2h"]
+[gd_scene load_steps=12 format=3 uid="uid://cud2be8l2ho2h"]
 
 [ext_resource type="Texture2D" uid="uid://1yba5bwjdni1" path="res://graphics/projectiles/grenade.png" id="1_pgwjd"]
 [ext_resource type="Script" path="res://scenes/projectiles/grenade.gd" id="1_qxch6"]
@@ -64,6 +64,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PointLight2D:enabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true, false, true]
 }
 
 [sub_resource type="Animation" id="Animation_hn2k7"]
@@ -144,6 +156,54 @@ tracks/5/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PointLight2D:energy")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [9.1, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PointLight2D:texture_scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 2.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [4.2, 0.01]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("PointLight2D:shadow_item_cull_mask")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("LightOccluder2D:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_untx3"]
 length = 0.001
@@ -219,6 +279,66 @@ tracks/5/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PointLight2D:enabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PointLight2D:energy")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.1]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("PointLight2D:texture_scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("PointLight2D:shadow_item_cull_mask")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("LightOccluder2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v0um3"]
 _data = {
@@ -226,6 +346,9 @@ _data = {
 "Explosion_Animation": SubResource("Animation_hn2k7"),
 "RESET": SubResource("Animation_untx3")
 }
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2n4u6"]
+polygon = PackedVector2Array(-23, -21, -27, -16, -29, -12, -30, -7, -31, -1, -31, 4, -30, 7, -28, 11, -27, 14, -22, 20, -17, 25, -13, 27, -10, 28, -6, 29, -2, 30, 2, 30, 10, 29, 14, 27, 20, 23, 22, 21, 26, 17, 27, 14, 29, 9, 30, 5, 31, 1, 30, -2, 29, -7, 28, -11, 26, -16, 22, -21, 16, -25, 12, -27, 8, -29, 0, -30, -3, -30, -8, -29, -11, -28, -17, -25, -20, -23)
 
 [node name="Grenade" type="RigidBody2D"]
 collision_layer = 8
@@ -260,3 +383,13 @@ color = Color(0.799974, 0.0629796, 0.187952, 1)
 energy = 4.71
 texture = ExtResource("4_f0a47")
 texture_scale = 0.23
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_2n4u6")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.928856, 0.188333, 0.0944517, 1)
+energy = 1.1
+shadow_enabled = true
+shadow_item_cull_mask = 0
+texture = ExtResource("4_f0a47")

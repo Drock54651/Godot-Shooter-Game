@@ -18,5 +18,9 @@ position = Vector2(132, 668)
 [node name="Drone" parent="." instance=ExtResource("16_x4rsw")]
 position = Vector2(371, 916)
 
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="Lights" type="Node2D" parent="."]
+
 [connection signal="grenade_signal" from="Player" to="." method="_on_player_grenade_signal"]
 [connection signal="laser_signal" from="Player" to="." method="_on_player_laser_signal"]
