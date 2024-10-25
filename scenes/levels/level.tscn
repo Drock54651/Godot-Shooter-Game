@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ncoxcunt65nt"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_hs2he"]
+[ext_resource type="PackedScene" uid="uid://bjlu21rtbi8n2" path="res://scenes/User Interface/ui.tscn" id="3_28cdu"]
 [ext_resource type="PackedScene" uid="uid://bq1egj4fdc4as" path="res://scenes/player/player.tscn" id="4_eq4qf"]
-[ext_resource type="PackedScene" uid="uid://dqedi4ua5hga8" path="res://scenes/drone/drone.tscn" id="16_x4rsw"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_hs2he")
@@ -15,12 +15,11 @@ metadata/_edit_lock_ = true
 [node name="Player" parent="." instance=ExtResource("4_eq4qf")]
 position = Vector2(132, 668)
 
-[node name="Drone" parent="." instance=ExtResource("16_x4rsw")]
-position = Vector2(371, 916)
-
 [node name="Objects" type="Node2D" parent="."]
 
 [node name="Lights" type="Node2D" parent="."]
+
+[node name="UI" parent="." instance=ExtResource("3_28cdu")]
 
 [connection signal="grenade_signal" from="Player" to="." method="_on_player_grenade_signal"]
 [connection signal="laser_signal" from="Player" to="." method="_on_player_laser_signal"]

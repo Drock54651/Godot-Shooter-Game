@@ -1,13 +1,11 @@
-[gd_scene load_steps=21 format=4 uid="uid://c5j0jd5fh741o"]
+[gd_scene load_steps=19 format=4 uid="uid://c5j0jd5fh741o"]
 
 [ext_resource type="PackedScene" uid="uid://ncoxcunt65nt" path="res://scenes/levels/level.tscn" id="1_o5rdo"]
 [ext_resource type="Script" path="res://scenes/levels/outside.gd" id="2_a8b3k"]
 [ext_resource type="Texture2D" uid="uid://c8a5kt3fccq8u" path="res://graphics/decals/dirt_patch.png" id="2_les14"]
 [ext_resource type="Texture2D" uid="uid://clm7ce1bs6mbq" path="res://graphics/ground/stones.png" id="3_f87yf"]
 [ext_resource type="Texture2D" uid="uid://bkq0i2cj8c5h8" path="res://graphics/tilesets/outside_walls.png" id="4_hcqp2"]
-[ext_resource type="PackedScene" uid="uid://d132sg1nloto0" path="res://scenes/Container/toilet.tscn" id="5_0uu4b"]
 [ext_resource type="Texture2D" uid="uid://b4ucfqupc1x83" path="res://graphics/tilesets/soil.png" id="5_8pam2"]
-[ext_resource type="PackedScene" uid="uid://wgioknocddys" path="res://scenes/Container/crate.tscn" id="6_17a7w"]
 [ext_resource type="Texture2D" uid="uid://lugcpsr6m4gf" path="res://graphics/decals/moss/moss_3.png" id="6_twqs5"]
 [ext_resource type="Texture2D" uid="uid://2fi78v4b4v7v" path="res://graphics/decals/moss/moss_1.png" id="7_m7byd"]
 [ext_resource type="Texture2D" uid="uid://b5hu7wcuyn1u7" path="res://graphics/decals/moss/moss_2.png" id="8_dapge"]
@@ -130,10 +128,7 @@ frame_progress = 0.430564
 
 [node name="Gate" parent="." index="1" instance=ExtResource("14_qbamg")]
 
-[node name="Toilet" parent="." index="5" instance=ExtResource("5_0uu4b")]
-position = Vector2(489, 518)
-
-[node name="Crate" parent="." index="6" instance=ExtResource("6_17a7w")]
-position = Vector2(950, 523)
+[node name="Player" parent="." index="3"]
+position = Vector2(574, 425)
 
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]
