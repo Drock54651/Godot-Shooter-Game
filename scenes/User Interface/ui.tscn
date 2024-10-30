@@ -61,6 +61,8 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="GrenadeCounter/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_j5qg3")
+text = "29
+"
 horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="GrenadeCounter/VBoxContainer"]
