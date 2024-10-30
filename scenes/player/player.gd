@@ -24,8 +24,9 @@ func _process(_delta: float) -> void:
 	
 	
 	# Laser shooting
-	if Input.is_action_just_pressed('primary action') and can_laser:
+	if Input.is_action_just_pressed('primary action') and can_laser and Globals.laser_amount > 0:
 		can_laser = false
+		Globals.laser_amount -= 1
 		$LaserTimer.start()
 		
 		# Randomly select a marker2D for the laser start
@@ -38,8 +39,9 @@ func _process(_delta: float) -> void:
 		# Emit particles
 		$LaserParticles.emitting = true
 		
-	if Input.is_action_just_pressed("secondary action") and can_grenade:
+	if Input.is_action_just_pressed("secondary action") and can_grenade and Globals.grenade_amount > 0:
 		can_grenade = false
+		Globals.grenade_amount -= 1
 		$GrenadeTimer.start()
 		
 		var grenade_markers = $GrenadeStartPositions.get_children()
