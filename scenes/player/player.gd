@@ -8,6 +8,7 @@ var can_grenade: bool = true
 
 signal laser_signal(pos, direction)
 signal grenade_signal(pos, direction)
+signal update_stats
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -55,3 +56,16 @@ func _on_laser_timer_timeout() -> void:
 
 func _on_grenade_timer_timeout() -> void:
 	can_grenade = true
+	
+func add_item(type: String):
+	if type == 'laser':
+		Globals.laser_amount += 5
+		
+	if type == 'grenade':
+		Globals.grenade_amount += 1
+		
+	#if type == 'health':
+		#Globals.laser_amount += 10
+		
+	update_stats.emit()
+		
