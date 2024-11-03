@@ -49,24 +49,24 @@ wait_time = 2.0
 [node name="LaserStartPositions" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(132, 17)
+position = Vector2(135, 17)
 
 [node name="Marker2D2" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(132, 8)
+position = Vector2(135, 9)
 
 [node name="Marker2D3" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(133, 24)
+position = Vector2(135, 24)
 
 [node name="GrenadeStartPositions" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="GrenadeStartPositions"]
-position = Vector2(133, 17)
+position = Vector2(134, 17)
 
 [node name="Marker2D2" type="Marker2D" parent="GrenadeStartPositions"]
-position = Vector2(132, 24)
+position = Vector2(136, 24)
 
 [node name="Marker2D3" type="Marker2D" parent="GrenadeStartPositions"]
-position = Vector2(132, 7)
+position = Vector2(135, 8)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.6, 0.6)

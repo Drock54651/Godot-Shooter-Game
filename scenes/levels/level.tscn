@@ -12,10 +12,12 @@ script = ExtResource("1_hs2he")
 [node name="Projectiles" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
 
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="Items" type="Node2D" parent="."]
+
 [node name="Player" parent="." instance=ExtResource("4_eq4qf")]
 position = Vector2(132, 668)
-
-[node name="Objects" type="Node2D" parent="."]
 
 [node name="Lights" type="Node2D" parent="."]
 
@@ -23,4 +25,3 @@ position = Vector2(132, 668)
 
 [connection signal="grenade_signal" from="Player" to="." method="_on_player_grenade_signal"]
 [connection signal="laser_signal" from="Player" to="." method="_on_player_laser_signal"]
-[connection signal="update_stats" from="Player" to="." method="_on_player_update_stats"]

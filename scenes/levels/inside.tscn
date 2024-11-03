@@ -46,14 +46,7 @@ layer_1/tile_data = PackedInt32Array(65533, 262144, 2, 65532, 262144, 2, 65531, 
 layer_2/name = "InteriorWalls"
 layer_2/tile_data = PackedInt32Array(-7, 65536, 6, -65543, 65536, 6, -131079, 65536, 6, -196615, 65536, 6, -262151, 0, 7, -262150, 0, 6, -262149, 0, 6, -262148, 0, 6, -262147, 65536, 7, -196611, 65536, 6, -131075, 65536, 6, -65539, 65536, 6, -327676, 196608, 6, -262140, 65536, 6, -196604, 196608, 6, -327675, 196608, 8, -327674, 196608, 8, -327673, 393216, 7, -327677, 0, 6, -327678, 0, 6, -196605, 0, 6, -196606, 0, 6)
 
-[node name="Player" parent="." index="3"]
-position = Vector2(2, -181)
-
-[node name="PointLight2D" type="PointLight2D" parent="Player" index="9"]
-texture = ExtResource("4_wgutn")
-texture_scale = 2.6
-
-[node name="Objects" parent="." index="4"]
+[node name="Objects" parent="." index="3"]
 metadata/_edit_lock_ = true
 
 [node name="Crate" parent="Objects" index="0" instance=ExtResource("6_6us06")]
@@ -71,7 +64,26 @@ rotation = -1.5708
 position = Vector2(1268, -1089)
 rotation = 3.14159
 
-[node name="Lights" parent="." index="5"]
+[node name="Player" parent="." index="5"]
+position = Vector2(2, -181)
+
+[node name="PointLight2D" type="PointLight2D" parent="Player" index="9"]
+texture = ExtResource("4_wgutn")
+texture_scale = 2.6
+
+[node name="ExitGateArea" type="Area2D" parent="." index="6"]
+position = Vector2(0, 209)
+scale = Vector2(1, 1.03695)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitGateArea" index="0"]
+position = Vector2(-1, 0.964386)
+rotation = -3.14159
+scale = Vector2(1.76961, -2.97436)
+shape = SubResource("RectangleShape2D_bg828")
+metadata/_edit_lock_ = true
+
+[node name="Lights" parent="." index="7"]
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -141,19 +153,7 @@ position = Vector2(2327, -1347)
 scale = Vector2(3.1009, 3.1009)
 texture = ExtResource("9_p1tr1")
 
-[node name="ExitGateArea" type="Area2D" parent="." index="6"]
-position = Vector2(0, 209)
-scale = Vector2(1, 1.03695)
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitGateArea" index="0"]
-position = Vector2(-1, 0.964386)
-rotation = -3.14159
-scale = Vector2(1.76961, -2.97436)
-shape = SubResource("RectangleShape2D_bg828")
-metadata/_edit_lock_ = true
-
 [node name="Item" parent="." index="8" instance=ExtResource("16_5deui")]
-position = Vector2(409, -523)
+position = Vector2(599, -571)
 
 [connection signal="body_entered" from="ExitGateArea" to="." method="_on_exit_gate_area_body_entered"]
