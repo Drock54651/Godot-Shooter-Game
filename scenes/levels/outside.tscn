@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://c5j0jd5fh741o"]
+[gd_scene load_steps=19 format=4 uid="uid://c5j0jd5fh741o"]
 
 [ext_resource type="PackedScene" uid="uid://ncoxcunt65nt" path="res://scenes/levels/level.tscn" id="1_o5rdo"]
 [ext_resource type="Script" path="res://scenes/levels/outside.gd" id="2_a8b3k"]
@@ -15,9 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://cb7w50aecsnch" path="res://scenes/objects/steam_vent.tscn" id="12_6itgm"]
 [ext_resource type="PackedScene" uid="uid://wt5n2b6ogxjf" path="res://scenes/objects/light_fan_animation.tscn" id="13_g7xe2"]
 [ext_resource type="PackedScene" uid="uid://dplwotglk6vho" path="res://scenes/gate/gate.tscn" id="14_qbamg"]
-[ext_resource type="PackedScene" uid="uid://bbo16dam1r8bq" path="res://scenes/items/item.tscn" id="16_fj1dt"]
-[ext_resource type="PackedScene" uid="uid://wgioknocddys" path="res://scenes/Container/crate.tscn" id="16_ihep8"]
-[ext_resource type="PackedScene" uid="uid://d132sg1nloto0" path="res://scenes/Container/toilet.tscn" id="17_o0br5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtkx7"]
 resource_name = "walls"
@@ -58,6 +55,9 @@ sources/1 = SubResource("TileSetAtlasSource_mhly2")
 [node name="Outside" instance=ExtResource("1_o5rdo")]
 position = Vector2(2, 0)
 script = ExtResource("2_a8b3k")
+
+[node name="Gate" parent="." index="1" instance=ExtResource("14_qbamg")]
+z_index = 1
 
 [node name="Decoration" type="Sprite2D" parent="Ground" index="0"]
 modulate = Color(0.917306, 0.846234, 0.615855, 1)
@@ -130,20 +130,10 @@ position = Vector2(466, 2495)
 autoplay = "default"
 frame_progress = 0.430564
 
-[node name="Gate" parent="." index="1" instance=ExtResource("14_qbamg")]
-
-[node name="Player" parent="." index="4"]
+[node name="Player" parent="." index="6"]
+z_index = 2
 position = Vector2(574, 425)
 
-[node name="Crate" parent="Objects" index="0" instance=ExtResource("16_ihep8")]
-position = Vector2(298, 1276)
-collision_mask = 13
-
-[node name="Toilet" parent="Objects" index="1" instance=ExtResource("17_o0br5")]
-position = Vector2(1458, 424)
-collision_mask = 13
-
-[node name="Item" parent="." index="7" instance=ExtResource("16_fj1dt")]
-position = Vector2(176, 419)
-
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]
+[connection signal="player_entered" from="Ground/House" to="." method="_on_house_player_entered"]
+[connection signal="player_exited" from="Ground/House" to="." method="_on_house_player_exited"]

@@ -26,7 +26,7 @@ func _ready():
 func _process(delta: float) -> void:
 	rotation += rotation_speed * delta
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	# body will be player since its the one entering the area2d
 	# add_item is in the player.gd
 	if type == 'laser':
