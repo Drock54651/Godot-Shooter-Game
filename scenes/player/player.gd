@@ -17,7 +17,7 @@ func _process(_delta: float) -> void:
 	
 	velocity = direction * speed
 	move_and_slide()
-	
+	Globals.player_pos = global_position
 	# Rotate Player: look towards mouse pointer
 	look_at(get_global_mouse_position())
 	
@@ -56,16 +56,3 @@ func _on_laser_timer_timeout() -> void:
 func _on_grenade_timer_timeout() -> void:
 	can_grenade = true
 	
-func add_item(_type: String):
-	pass
-	# if type == 'laser':
-	# 	Globals.laser_amount += 5
-		
-	# if type == 'grenade':
-	# 	Globals.grenade_amount += 1
-		
-	#if type == 'health':
-		#Globals.laser_amount += 10
-		
-	
-		

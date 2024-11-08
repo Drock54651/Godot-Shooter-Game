@@ -20,6 +20,8 @@ metadata/_edit_lock_ = true
 
 [node name="Items" type="Node2D" parent="."]
 
+[node name="Enemies" type="Node2D" parent="."]
+
 [node name="Player" parent="." instance=ExtResource("4_eq4qf")]
 position = Vector2(132, 668)
 

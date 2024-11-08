@@ -69,6 +69,7 @@ position = Vector2(-2673, 296)
 texture = ExtResource("4_5boo3")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Decals" index="5"]
+modulate = Color(0.423643, 0.608856, 0.0331245, 1)
 position = Vector2(2741, 274)
 texture = ExtResource("5_4xvb3")
 
@@ -79,7 +80,7 @@ texture = ExtResource("6_p720f")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Decals" index="7"]
 modulate = Color(0.89155, 0, 0.356015, 1)
-position = Vector2(1812, -896)
+position = Vector2(1808, -896)
 rotation = -3.18348
 texture = ExtResource("6_p720f")
 
@@ -185,35 +186,39 @@ collision_mask = 11
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="0"]
 polygon = PackedVector2Array(-113, -1210, -74, -1276, -7, -1270, 22, -1244, 22, -1204, 17, -1162, -28, -1144, -100, -1153, -118, -1186)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="1"]
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="1"]
+position = Vector2(-398, -1072)
+polygon = PackedVector2Array(-113, -1210, -88, -1345, -18, -1343, 22, -1244, 22, -1204, -9, -991, -52, -978, -82, -991, -118, -1186)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="2"]
 position = Vector2(-178, -1)
 polygon = PackedVector2Array(-73, -1219, -59, -1240, -22, -1243, -11, -1227, -10, -1204, -16, -1190, -35, -1173, -67, -1181, -74, -1200)
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="2"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="3"]
 position = Vector2(-33, -188)
 polygon = PackedVector2Array(-73, -1219, -59, -1240, -22, -1243, -11, -1227, -10, -1204, -16, -1190, -35, -1173, -67, -1181, -74, -1200)
 
-[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="3"]
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="4"]
 position = Vector2(-33, -188)
 polygon = PackedVector2Array(-73, -1219, -59, -1240, -22, -1243, -11, -1227, -10, -1204, -16, -1190, -35, -1173, -67, -1181, -74, -1200)
 
-[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="4"]
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="5"]
 position = Vector2(-1707, 20)
 polygon = PackedVector2Array(-73, -1219, -59, -1240, -22, -1243, -11, -1227, -10, -1204, -16, -1190, -35, -1173, -67, -1181, -74, -1200)
 
-[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="5"]
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="6"]
 position = Vector2(-1955, 325)
 polygon = PackedVector2Array(-73, -1219, -59, -1240, -22, -1243, -11, -1227, -10, -1204, -16, -1190, -35, -1173, -67, -1181, -74, -1200)
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="6"]
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="7"]
 position = Vector2(210, -52)
 polygon = PackedVector2Array(-73, -1219, -62, -1263, -43, -1254, -11, -1227, -10, -1204, -16, -1190, -53, -1159, -74, -1174, -74, -1200)
 
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="7"]
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="8"]
 position = Vector2(210, -52)
 polygon = PackedVector2Array(-73, -1219, -62, -1263, -43, -1254, -11, -1227, -10, -1204, -16, -1190, -53, -1159, -74, -1174, -74, -1200)
 
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="8"]
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="9"]
 position = Vector2(-15, 224)
 polygon = PackedVector2Array(-55, -1215, -53, -1230, -37, -1227, -25, -1226, -22, -1206, -16, -1190, -46, -1182, -65, -1190, -64, -1206)
 
@@ -237,11 +242,9 @@ rotation = 3.14159
 
 [node name="Crate3" parent="Objects" index="4" instance=ExtResource("6_6us06")]
 position = Vector2(-1060, -2360)
-rotation = 3.14159
 
 [node name="Crate4" parent="Objects" index="5" instance=ExtResource("6_6us06")]
 position = Vector2(1129, -2355)
-rotation = 3.14159
 
 [node name="Crate5" parent="Objects" index="6" instance=ExtResource("6_6us06")]
 position = Vector2(2760, -515)
