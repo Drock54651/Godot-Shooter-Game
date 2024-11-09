@@ -22,8 +22,11 @@ var health = 60:
 	get:
 		return health
 	set(value):
+		# When player grabs health items, there should be no delay
 		if value > health:
 			health = min(value, 100)
+			
+		# Player has invulnerable time if they lose health
 		else:
 			if player_vulnerable:
 				health = value
