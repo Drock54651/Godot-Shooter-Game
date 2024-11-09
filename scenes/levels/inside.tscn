@@ -270,7 +270,7 @@ scale = Vector2(1.76961, -2.97436)
 shape = SubResource("RectangleShape2D_bg828")
 metadata/_edit_lock_ = true
 
-[node name="Player" parent="." index="8"]
+[node name="Player" parent="." index="9"]
 position = Vector2(2, -181)
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
@@ -279,7 +279,7 @@ metadata/_edit_group_ = true
 texture = ExtResource("4_wgutn")
 texture_scale = 2.6
 
-[node name="Lights" parent="." index="9"]
+[node name="Lights" parent="." index="10"]
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
