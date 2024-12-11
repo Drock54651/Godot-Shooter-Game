@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://c5j0jd5fh741o"]
+[gd_scene load_steps=23 format=4 uid="uid://c5j0jd5fh741o"]
 
 [ext_resource type="PackedScene" uid="uid://ncoxcunt65nt" path="res://scenes/levels/level.tscn" id="1_o5rdo"]
 [ext_resource type="Script" path="res://scenes/levels/outside.gd" id="2_a8b3k"]
@@ -15,8 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://cb7w50aecsnch" path="res://scenes/objects/steam_vent.tscn" id="12_6itgm"]
 [ext_resource type="PackedScene" uid="uid://wt5n2b6ogxjf" path="res://scenes/objects/light_fan_animation.tscn" id="13_g7xe2"]
 [ext_resource type="PackedScene" uid="uid://dplwotglk6vho" path="res://scenes/gate/gate.tscn" id="14_qbamg"]
+[ext_resource type="PackedScene" uid="uid://wgioknocddys" path="res://scenes/Container/crate.tscn" id="16_o22tg"]
 [ext_resource type="PackedScene" uid="uid://2uy80ia3elk3" path="res://scenes/enemies/scout.tscn" id="16_po51g"]
 [ext_resource type="PackedScene" uid="uid://uk5ec02veu3l" path="res://scenes/enemies/bug.tscn" id="17_j1xt4"]
+[ext_resource type="PackedScene" uid="uid://dqedi4ua5hga8" path="res://scenes/drone/drone.tscn" id="18_3irct"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtkx7"]
 resource_name = "walls"
@@ -125,20 +127,29 @@ rotation = 3.14159
 metadata/_edit_lock_ = true
 
 [node name="SteamVent" parent="Ground" index="11" instance=ExtResource("12_6itgm")]
-position = Vector2(-1040, 538)
+position = Vector2(3742, 974)
+collision_layer = 4
+collision_mask = 11
 
 [node name="LightFanAnimation" parent="Ground" index="12" instance=ExtResource("13_g7xe2")]
 position = Vector2(466, 2495)
 autoplay = "default"
 frame_progress = 0.430564
 
+[node name="Crate" parent="Objects" index="0" instance=ExtResource("16_o22tg")]
+position = Vector2(4142, 1248)
+
 [node name="Scout" parent="Enemies" index="0" instance=ExtResource("16_po51g")]
-position = Vector2(212, 589)
+position = Vector2(-534, 1056)
 collision_layer = 2
 collision_mask = 11
 
 [node name="Bug" parent="Enemies" index="1" instance=ExtResource("17_j1xt4")]
 position = Vector2(2361, 1353)
+collision_mask = 15
+
+[node name="Drone" parent="Enemies" index="2" instance=ExtResource("18_3irct")]
+position = Vector2(4386, 1685)
 
 [node name="Player" parent="." index="8"]
 z_index = 2
